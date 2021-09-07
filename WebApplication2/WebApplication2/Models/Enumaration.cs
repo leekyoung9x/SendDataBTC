@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace WebApplication2.Models
+﻿namespace WebApplication2.Models
 {
     public class Enumaration
     {
@@ -50,8 +45,6 @@ namespace WebApplication2.Models
             THAReceiveNhanhieu = 19,
 
             THAReceiveChucdanh = 20
-
         }
-
     }
 }
