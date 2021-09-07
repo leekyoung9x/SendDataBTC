@@ -4,8 +4,6 @@ namespace WebApplication2.Models
 {
     public class AppSettingKey
     {
-        public static string THAAPIPath = "THAAPIPath";
-
         public static string GRANT_TYPE = "GRANT_TYPE";
 
         public static string USERNAME = "USERNAME";
@@ -47,6 +45,12 @@ namespace WebApplication2.Models
             {"rpt08adktskcht01", "aprserver/report/rpt08adktskcht01/sync"},
             {"rpt08adktskcht02", "aprserver/report/rpt08adktskcht02/sync"},
             {"rpt08adktskcht03", "aprserver/report/rpt08adktskcht03/sync"},
+            {"rpt08bdktskcht01", "aprserver/report/rpt08bdktskcht01/sync"},
+            {"rpt08bdktskcht02", "aprserver/report/rpt08bdktskcht02/sync"},
+            {"rpt08bdktskcht03", "aprserver/report/rpt08bdktskcht03/sync"},
+            {"rpt08cdktskcht01", "aprserver/report/rpt08cdktskcht01/sync"},
+            {"rpt08cdktskcht02", "aprserver/report/rpt08cdktskcht02/sync"},
+            {"rpt08ddktskcht", "aprserver/report/rpt08ddktskcht/sync"}
         };
     }
 }
