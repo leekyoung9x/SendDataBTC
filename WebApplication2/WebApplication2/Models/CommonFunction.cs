@@ -125,7 +125,7 @@ namespace WebApplication2.Models
             }
             catch (Exception)
             {
-                throw;
+                Console.WriteLine("Key config không tồn tại");
             }
 
             return res;
