@@ -74,7 +74,7 @@ namespace WebApplication2.Models
         /// <param name="api">Có dạng aprserver/report/rpt11bcktsc/sync </param>
         /// <param name="data">Dữ liệu gửi đi</param>
         /// <returns></returns>
-        public static async Task<object> SendDataBTC(string url, string api, object data)
+        public static async Task<object> SendDataBTC(string url, string api, object data, HttpMethod type)
         {
             string responseResult = string.Empty;
 
@@ -91,9 +91,12 @@ namespace WebApplication2.Models
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
                     // Tạo một request post
-                    var request = new HttpRequestMessage(HttpMethod.Post, api);
+                    var request = new HttpRequestMessage(type, api);
 
-                    request.Content = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+                    if (type == HttpMethod.Post)
+                    {
+                        request.Content = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+                    }
 
                     var response = await client.SendAsync(request);
 
